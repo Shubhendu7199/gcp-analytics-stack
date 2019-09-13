@@ -60,5 +60,6 @@ resource "google_dataflow_job" "big_data_job" {
        outputTableSpec : "lucifer-251906:fooeee.bar"
    }
     machine_type = "${var.machine_type}"
-   
+   network               = "${replace(var.network_self_link, "/(.*)/networks/(.*)/", "$2")}"
+   subnetwork            = "${replace(var.subnetwork_self_link, "/(.*)/regions/(.*)/", "regions/$2")}"
 }
