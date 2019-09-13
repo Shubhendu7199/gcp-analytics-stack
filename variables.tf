@@ -13,4 +13,9 @@ variable "zone" {
 variable "machine_type" {
   description = "The machine type to use for the job."
 }
-
+variable "subnetwork_self_link" {
+  description = "The subnetwork self link to which VMs will be assigned."
+}
+variable "network_self_link" {
+  description = "The network self link to which VMs will be assigned."
+}
