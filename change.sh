@@ -6,5 +6,5 @@ sudo sed -i 's/target_machine/'$machine_type'/' terraform.tfvars
 
 
 terraform init
-terrform plan
+terraform plan
 terraform apply --auto-approve
