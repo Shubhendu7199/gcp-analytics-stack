@@ -39,16 +39,16 @@ resource "google_pubsub_topic" "topic" {
     fooee = "bar"
   }
 }
-resource "google_cloud_scheduler_job" "job1" {
-  name     = "test-job11"
-  description = "test job"
-  schedule = "* * * * *"
-  region = "us-central1"
-  pubsub_target {
-    topic_name = "${google_pubsub_topic.topic.id}"
-    data = "${base64encode("test")}"
-  }
-}
+# resource "google_cloud_scheduler_job" "job1" {
+#   name     = "test-job11"
+#   description = "test job"
+#   schedule = "* * * * *"
+#   region = "us-central1"
+#   pubsub_target {
+#     topic_name = "${google_pubsub_topic.topic.id}"
+#     data = "${base64encode("test")}"
+#   }
+# }
 resource "google_storage_bucket" "image-3234" {
   name     = "image-3234"
   location = "EU"
