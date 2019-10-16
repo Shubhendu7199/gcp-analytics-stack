@@ -1,6 +1,6 @@
 credentials= "credentials.json"
 gcp_project = "cloudglobaldelivery-1000135575"
-service_account_email = "analyticssa@cloudglobaldelivery-1000135575.iam.gserviceaccount.com"
+service_account_email = "analyticsservacc@cloudglobaldelivery-1000135575.iam.gserviceaccount.com"
 name= "data-1"
 max_workers = "2"
 on_delete = "cancel"
