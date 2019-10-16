@@ -1,3 +1,5 @@
+variable "credentials" {}
+variable "gcp_project" {}
 variable "name" {
   description = "The name of the dataflow job"
 }
