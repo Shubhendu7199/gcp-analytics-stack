@@ -37,7 +37,7 @@ resource "google_pubsub_topic" "topic" {
   name = "example-topic"
 
   labels = {
-    fooee = "bar"
+    fooeee = "bar"
   }
 }
 # resource "google_cloud_scheduler_job" "job1" {
