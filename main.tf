@@ -33,7 +33,7 @@ resource "google_bigquery_table" "default" {
 EOF
 }
 resource "google_pubsub_topic" "topic" {
-  service_account_email ="${var.service_account_email}"
+  
   name = "example-topic"
 
   labels = {
@@ -57,7 +57,7 @@ resource "google_pubsub_topic" "topic" {
 resource "google_dataflow_job" "big_data_job" {
     name = "${var.name}"
     zone = "${var.zone}"
-   
+   service_account_email ="${var.service_account_email}"
     max_workers = "${var.max_workers}"
     on_delete = "${var.on_delete}"
     template_gcs_path = "gs://dataflow-templates/latest/PubSub_to_BigQuery"
