@@ -4,7 +4,7 @@ sudo sed -i 's/target_machine/'$machine_type'/' terraform.tfvars
 //sudo sed -i 's/vmname/'$stack_name'/' terraform.tfvars
 //sudo sed -i 's/stacked/'$stack'/' terraform.tfvars
 
-
+terraform destroy
 terraform init
 terraform plan
 terraform apply --auto-approve
