@@ -1,3 +1,5 @@
+credentials= "credentials.json"
+gcp_project = "cloudglobaldelivery-1000135575"
 name= "data-1"
 max_workers = "2"
 on_delete = "cancel"
