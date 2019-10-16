@@ -59,7 +59,7 @@ resource "google_dataflow_job" "big_data_job" {
     max_workers = "${var.max_workers}"
     on_delete = "${var.on_delete}"
     template_gcs_path = "gs://dataflow-templates/latest/PubSub_to_BigQuery"
-    temp_gcs_location = "gs://cloudglobaldelivery-1000135575/tmp/"
+    temp_gcs_location = "gs://cloudglobaldelivery-1000135575/image-3234/tmp/"
      parameters = {
         inputTopic : "${google_pubsub_topic.topic.id}",
        outputTableSpec : "lucifer-251906:fooeee.bar"
