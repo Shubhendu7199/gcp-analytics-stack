@@ -54,12 +54,12 @@ resource "google_dataflow_job" "big_data_job" {
     max_workers = "${var.max_workers}"
     on_delete = "${var.on_delete}"
     template_gcs_path = "gs://dataflow-templates/latest/PubSub_to_BigQuery"
-    temp_gcs_location = "gs://upadhey/tmp_dir/"
+    temp_gcs_location = "gs://cloudglobaldelivery-1000135575/tmp/"
      parameters = {
         inputTopic : "${google_pubsub_topic.topic.id}",
        outputTableSpec : "lucifer-251906:fooeee.bar"
    }
     machine_type = "${var.machine_type}"
-   network               = "${replace(var.network_self_link, "/(.*)/networks/(.*)/", "$2")}"
-   subnetwork            = "${replace(var.subnetwork_self_link, "/(.*)/regions/(.*)/", "regions/$2")}"
+//   network               = "${replace(var.network_self_link, "/(.*)/networks/(.*)/", "$2")}"
+//   subnetwork            = "${replace(var.subnetwork_self_link, "/(.*)/regions/(.*)/", "regions/$2")}"
 }
